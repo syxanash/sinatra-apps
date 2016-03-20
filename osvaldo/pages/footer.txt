@@ -1,0 +1,2 @@
+Osvaldo is a lightweight and buggy CMS made using <a target="_blank" href="http://sinatrarb.com">Sinatra</a> a Ruby web framework<br /><br />
+&nbsp;<a target="_blank" href="http://www.sinatrarb.com"><img style="border-width:0" src="http://i.imgur.com/jd8fDkS.png" alt="Powered by Sinatra"></a>&nbsp;<a target="_blank" href="http://www.vim.org"><img style="border-width:0" src="http://i.imgur.com/Db4GZyA.png" alt="Powered by VIM"></a>

@@ -1,0 +1,10 @@
+<div style="text-align: center;">
+  <img id="bulb" src="img/load.png" alt="off" />
+</div>
+
+<p>
+  <font color="white">click <button onclick="change()">here</button> or shake your device to switch the light!</font>
+  <% if @bulb_id == @master_bulb %>
+  <br><br><font color="white">click <a href="/generate"><button>here</button></a> to create a personal light bulb</font>
+  <% end %>
+</p>

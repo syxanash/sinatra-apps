@@ -1,0 +1,28 @@
+[title]Osvaldo is so fabulous![/title]
+[sub]Lorem Ipsum[/sub]
+
+This is just some normal text :-D 
+[quote]Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.[/quote]
+
+[u]underlined text[/u]
+
+[b]fat man[/b]
+
+[i]pizza and pasta[/i]
+
+[c]At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga.[/c]
+
+[mail:obama@whitehouse.gov]
+
+mail me at [mail:linus@kernel.org|tinuslorvalds]
+
+[image:http://upload.wikimedia.org/wikipedia/commons/thumb/2/2d/Frank_Sinatra2%2C_Pal_Joey.jpg/200px-Frank_Sinatra2%2C_Pal_Joey.jpg]
+
+the power of [link:http://google.com|Internet].
+
+[link:http://4chan.org/g]
+
+[line]
+
+
+lol hr

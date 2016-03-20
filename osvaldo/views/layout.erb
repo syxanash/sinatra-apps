@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title><%= "#{@title}" %></title>
+  <link rel="stylesheet" type="text/css" href="/template.css" />
+  <meta http-equiv="Content-Type" content="text/html;charset=utf-8"/>
+</head>
+<body>
+  <div id="container">
+
+    <div id="top">
+      <h1><%= "#{@title}" %></h1>
+    </div>
+
+    <div id="nav">
+      <%#
+        the following code block will be used to print the pages list.
+        Note that, if a page is the same of the visited page, then there
+        will not be any link to the same page...
+      %>
+
+      <%= "<ul>" %>
+
+      <%#
+        the index.txt file was checked first because
+        the home page link must always be placed at the top of the list
+      %>
+        
+      <% if @current_page == 'index.txt' %>
+        <%= "<li>home</li>" %>
+      <% else %>
+        <%= "<li><a href=\"/page/index\">home</a></li>" %>
+      <% end %>
+        
+      <% page_list = get_pages.sort %>
+
+      <% if page_list.any?
+        page_list.each do |page|
+          if @current_page == page + ".txt" %>
+            <%= "<li>#{page}</li>" %>
+          <% else %>
+            <%= "<li><a href=\"/page/#{page}\">#{page}</a></li>" %>
+          <% end %>
+      <% end %>
+
+        <%= "</ul>" %>
+      <% end %>
+    </div>
+
+    <div id="content">
+      <%# include the content of the page located in page.erb %>
+      <%= yield %>
+
+      <div id="date">
+        <%= @file_time %>
+      </div>
+    </div>
+
+    <div id="footer">
+      <p><%= if File.exist? 'pages/footer.txt' then File.read('pages/footer.txt') else "3==D + (°) = (^_^)" end %></p>
+    </div>
+
+  </div>
+</body>
+</html>

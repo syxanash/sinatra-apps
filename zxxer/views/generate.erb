@@ -1,0 +1,20 @@
+<%=
+# ZXX fonts
+fonts = [
+  "zxx-camo.otf",
+  "zxx-false.otf",
+  "zxx-noise.otf",
+  "zxx-xed.otf"
+]
+
+if @text.size > 140
+  redirect '/generate/error'
+end
+
+MagickTitle.say(
+  @text,
+  :font => fonts[Random.rand(fonts.size)],
+  :font_size => 50,
+  :color => "black",
+).to_html()
+%>
