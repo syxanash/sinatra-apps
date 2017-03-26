@@ -1,0 +1,24 @@
+<%=
+@raw = @text.split(" ")
+
+new_text = String.new
+
+@raw.each.with_index(1) do |word, i|
+  if i % 5 == 0 and i != 0
+    new_text += word + "\n"
+  else
+    new_text += word + " "
+  end
+end
+
+title = MagickTitle.say(
+  new_text,
+  :font_size => 14,
+  :color => "#333",
+)
+
+settings.client.update_with_media("", File.new("public/" + title.url))
+
+"your longer tweet was successfully posted!"
+
+%>
