@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" type="text/css" href="/template.css" />
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ma~</title>
+</head>
+<body>
+    <a href="https://github.com/syxanash/matilde"><img style="position: absolute; top: 0; right: 0; border: 0;" src="https://s3.amazonaws.com/github/ribbons/forkme_right_gray_6d6d6d.png" alt="Fork me on GitHub"></a>
+    <div id="header">
+       <a href="/"><img src="matilde-logo.png" alt="matilde-logo" /></a>
+    </div>
+    
+    <div id="container">
+        <%= yield %>
+    </div>
+
+    <p><a style="display: block;" target="_blank" href="https://github.com/syxanash/matilde/commits/"><div id="footer">Powered by Ma~ <%= PasswordGenerator.version %></a></div></p>
+</body>
+</html>

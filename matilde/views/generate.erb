@@ -1,0 +1,56 @@
+<div id="middle">
+  <% if params[:raw] %>
+
+  <h1><font color="<%= @string_color %>"><%= h @password %></font></h1>
+
+<% else
+  # random colors
+  random_colors = [
+    "be3f3f", # red
+    "be983f", # yellow
+    "3fbe4a", # green
+    "3f78be"  # blue
+  ]
+%>
+
+<%=
+  # draw the final picture
+
+  MagickTitle.say(
+
+    # the character dollar is escaped
+    # because of a bug of magick_title library
+
+    "#{@password.gsub('$','\$')}",
+    :font_size => 50,
+    :color => "##{@string_color}", # generate a random color
+  ).to_html(:class => "img-password")
+%>
+
+<% end %>
+  
+</div>
+
+<div id="content">
+
+<% if params[:mnemonic] %>
+<p>Try to remember the following words:</p>
+
+<div id="note">
+  <% @words_used.each do |x| %>
+  <%= x + '&nbsp;' %>
+  <% end %>
+</div>
+<% end %>
+
+<% if params[:unrec] %>
+  <p>your password can now be <b>safely saved</b> on your computer and partially unrecognizable by common <a href="http://en.wikipedia.org/wiki/Optical_character_recognition">OCR software</a>. You can find more about the developer of <b>ZXX font</b> at <a href="http://www.z-x-x.org/">z-x-x.org</a></p>
+<% end %>
+
+<p>If you wish to generate a <b>new password</b>, simply refresh this page :)</p>
+
+<% if params[:extended] %>
+    <p>Nato Alphabet: </p>
+    <h4><%= @generator.extended(@password).join(" ") %></h4>
+<% end %>
+</div>

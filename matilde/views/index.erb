@@ -1,0 +1,74 @@
+<div id="info">
+  Hi there, you know passwords is a serious matter and <b>Ma~</b> is just a self teaching project, thus please pay attention on how you use this software, keep in mind that it might have bugs hidden somewhere in the source code...<br>you can contribute to this open source project on github anyway ;)<br><br>
+  <div style="text-align: center;"><a href="#" onclick="showHide('info')">Got it!</a></div>
+</div>
+
+<div id="warning">
+  <i>Update 01/11/2013</i><br><br>
+  Sorry guys I had to close <b>Ma~</b>, I've got no time to maintain this project anymore, besides it is quite unstable and I highly recommend not to use it for real situations.<br><br>
+  <div style="text-align: center;"><a href="#" onclick="showHide('warning')">Alright then...</a></div>
+</div>
+
+<div id="content">
+    <form method="get" action="/generate">
+        Size<span id="number"></span> <span id="range"></span>
+        <br />
+        <input name="size" type="range" min="1" max="20" value="10" onchange="showValue(this.value, 'range', 'number')" /><br /><br />
+
+        <input type="checkbox" id="mnemonic" name="mnemonic" value="true" checked/>&nbsp;<label for="mnemonic">Mnemonic</label><br />
+        <input type="checkbox" id="raw" name="raw" value="true" onClick="disableInput('unrec')" />&nbsp;<label for="raw">Raw string</label><br />
+        <input type="checkbox" id="unrec" name="unrec" value="true" />&nbsp;<label for="unrec">Unrecognizable for OCRs</label><br /><br />
+
+        <input type="checkbox" id="lowercase" name="lowercase" value="true" checked/>&nbsp;<label for="lowercase">Lowercase</label><br />
+        <input type="checkbox" id="uppercase" name="uppercase" value="true" checked/>&nbsp;<label for="uppercase">Uppercase</label><br />
+        <input type="checkbox" id="numbers" name="numbers" value="true" checked/>&nbsp;<label for="numbers">Numbers</label><br />
+        <input type="checkbox" id="extra" name="extra" value="true" checked/>&nbsp;<label for="extra">Extra</label><br /><br />
+
+        <div align="center"><input class="submit" type="submit" value="Generate" /></div>
+    </form>
+</div>
+
+<!-- javascript functions -->
+
+<script type="text/javascript">
+function disableInput(inputId)
+{
+    (document.getElementById(inputId).getAttribute('disabled') == false)
+        ? document.getElementById(inputId).disabled = false
+        : document.getElementById(inputId).disabled = true;
+}
+
+function showValue(newValue, spanId, spanIdNumber)
+{
+    switch (true) {
+        case (newValue >= 1 && newValue < 2):
+            document.getElementById(spanId).innerHTML = "lol srsly?";
+            break;
+        case (newValue >= 2 && newValue < 8):
+            document.getElementById(spanId).innerHTML = "oh please...";
+            break;
+        case (newValue >= 8 && newValue < 16):
+            document.getElementById(spanId).innerHTML = "that's good, but...";
+            break;
+        case (newValue >= 16):
+            document.getElementById(spanId).innerHTML = "ninja.";
+            break;
+    }
+
+    document.getElementById(spanIdNumber).innerHTML = ": " + newValue + " -";
+}
+
+function showHide(id)
+{
+    var o = document.getElementById(id);
+    
+    if( o.style.display == 'none' ) {
+        document.getElementById(id).style.display = 'block';
+    }
+    else{
+        document.getElementById(id).style.display = 'none';
+    }
+}
+</script>
+
+<!-- end javascript -->
