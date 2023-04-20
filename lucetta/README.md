@@ -1,6 +1,6 @@
 # Lucetta
 
-![screenshot](http://i.imgur.com/GZ1txdO.gif)
+![screenshot](https://i.imgur.com/9UaGGLu.gif)
 
 A web app made to learn how to handle [websockets](https://en.wikipedia.org/wiki/WebSocket) in Ruby :bulb:
 

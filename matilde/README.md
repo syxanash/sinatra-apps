@@ -1,6 +1,6 @@
 # Matilde
 
-![logo](https://i.imgur.com/r4Ffvgd.png)
+![logo](https://i.imgur.com/CbmT3rS.png)
 
 This was a server side *mnemonic* password generator I created in highschool. The quality of the code is really poor but the app nonetheless does its job and you can check it out at [matilde.herokuapp.com](https://matilde.herokuapp.com).
 
